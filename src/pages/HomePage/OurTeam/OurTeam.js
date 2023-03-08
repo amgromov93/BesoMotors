@@ -3,7 +3,8 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from "../../sass/style.module.scss"
+
+import styles from "../../../sass/style.module.scss"
 
 export default function OurTeam() {
   const settings = {

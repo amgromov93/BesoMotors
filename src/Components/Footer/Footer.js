@@ -33,7 +33,7 @@ export default function Footer() {
           <article>
             <h4 className={styles.footer__category__title}>Контакти</h4>
             <div className={styles.footer__box}>
-              <Link to='/contact'>
+              <Link to='/contacts'>
                 <button className={styles.footer__link}>
                   Київ
                 </button>

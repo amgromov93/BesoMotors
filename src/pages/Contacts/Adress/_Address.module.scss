@@ -1,0 +1,23 @@
+.address {
+  padding: 50px 30px;
+  &__title {
+    color: #e3e3e3;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  &__company__name {
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+  &__box {
+    color: #e3e3e3;
+    & p {
+      font-size: 15px;
+      font-weight: 400;
+      margin: 15px 0;
+    }
+  }
+}

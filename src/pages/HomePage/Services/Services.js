@@ -1,12 +1,12 @@
 import React from "react";
 
-import styles from "../../sass/style.module.scss";
+import styles from "../../../sass/style.module.scss";
 
-import vespa from "../../img/vespa.png";
-import kawasaki from "../../img/kawasaki.png"
-import details from "../../img/details.png";
-import kvadro from "../../img/kvadro.png";
-import banner from "../../img/banerMoto.png";
+import vespa from "../../../img/vespa.png";
+import kawasaki from "../../../img/kawasaki.png"
+import details from "../../../img/details.png";
+import kvadro from "../../../img/kvadro.png";
+import banner from "../../../img/banerMoto.png";
 
 export default function Services() {
   const bannerClasses = styles.services__pic + ' ' + styles.services__pic_banner;

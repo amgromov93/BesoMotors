@@ -36,7 +36,7 @@
     margin-top: 5px;
     position: relative;
     &::before {
-      content: url(../../img/Subtract.svg);
+      content: url(../../../img/Subtract.svg);
       position: absolute;
       z-index: -1;
       opacity: 0.1;
@@ -45,7 +45,6 @@
     }
     &_span {
       color: #43bcff;
-      // text-shadow: 0 0 1em #43bcff;
     }
   }
   &__description {

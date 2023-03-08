@@ -2,6 +2,10 @@
 @import '../sass/Main.module';
 
 @import '../Components/Header/Header.module';
-@import '../Components/Services/Services.module';
-@import '../Components/OurTeam/OurTeam.module';
 @import '../Components/Footer/Footer.module';
+
+@import '../pages/HomePage/Services/Services.module';
+@import '../pages/HomePage/OurTeam/OurTeam.module';
+
+@import '../pages/Contacts/Map/Map.module';
+@import '../pages/Contacts/Adress/Address.module';

@@ -1,19 +1,19 @@
 import React from "react";
-
 import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Header/Header";
-import Services from "./Services/Services";
-import OurTeam from "./OurTeam/OurTeam";
 
-export default function Home() {
+import Header from "../../Components/Header/Header";
+import Address from "./Adress/Address";
+import Map from "./Map/Map";
+
+export default function Contacts() {
   return (
     <>
       <Header />
       <main>
-        <Services />
-        <OurTeam />
+        <Map/>
+        <Address/>
       </main>
       <Footer />
     </>
-  );
+  )
 }
