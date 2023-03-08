@@ -1,0 +1,59 @@
+.services {
+  &__container {
+    padding: 40px 30px;
+    &_text {
+      padding: 0 30px 40px;
+
+    }
+  }
+  &__item {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__pic {
+    margin-bottom: 10px;
+    &_banner {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__sticker {
+    font-weight: 800;
+    font-size: 11.7849px;
+    line-height: 128.6%;
+    letter-spacing: 0.04em;
+    color: #E23434;
+    text-transform: uppercase;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 128.6%;
+    letter-spacing: 0.04em;
+    color: #e3e3e3;
+    margin-top: 5px;
+    position: relative;
+    &::before {
+      content: url(../../img/Subtract.svg);
+      position: absolute;
+      z-index: -1;
+      opacity: 0.1;
+      top: -30px;
+      left: -25px;
+    }
+    &_span {
+      color: #43bcff;
+      // text-shadow: 0 0 1em #43bcff;
+    }
+  }
+  &__description {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 128.6%;
+    letter-spacing: 0.04em;
+    color: #bebebe;
+  }
+}

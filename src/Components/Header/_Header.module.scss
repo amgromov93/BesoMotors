@@ -1,0 +1,116 @@
+button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.header {
+  &__background_mobile {
+    background-image: url(../../img/backgroundMobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+  }
+  &__container {
+    padding: 30px;
+    position: relative;
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  &__burger {
+    z-index: 1;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 20px;
+    left: -20px;
+    top: -30px;
+    background-color: #798AC9;
+    padding: 100px 110px;
+    height: 110vh;
+    z-index: 4;
+    transition: 500ms;
+    &_none {
+      position: absolute;
+      left: -300px;
+    }
+  }
+  &__links {
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 200ms;
+    &:hover {
+      color: black;
+    }
+  }
+  &__description__box {
+    margin-top: 55px;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 40px;
+    color: #FFFFFF;
+  }
+  &__description {
+    margin: 10px 0 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #FFFFFF;
+    opacity: 0.8;
+  }
+  &__tel {
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    background: #798AC9;
+    border: 0.81px solid rgba(171, 163, 163, 0.2);
+    border-radius: 3.24px;
+    transition: 200ms;
+    &:hover {
+      background-color: #FFFFFF;
+      color: #798AC9;
+    }
+  }
+  &__company__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+  }
+  &__company {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    &_vespa {
+      background-image: url(../../img/companies/vespaLogo.png);
+    }
+    &_honda {
+      background-image: url(../../img/companies/hondaLogo.png);
+    }
+    &_yamaha {
+      background-image: url(../../img/companies/yamahaLogo.png);
+    }
+    &_bmw {
+      width: 27px;
+      height: 27px;
+      background-image: url(../../img/companies/bmwLogo.png);
+    }
+    &_harley {
+      background-image: url(../../img/companies/harleyLogo.png);
+    }
+  }
+}
