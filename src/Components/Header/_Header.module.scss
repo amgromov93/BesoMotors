@@ -22,6 +22,11 @@ button {
   }
   &__burger {
     z-index: 1;
+    &_fixed {
+      position: fixed;
+      right: 30px;
+      top: 35px;
+    }
   }
   &__nav {
     display: flex;

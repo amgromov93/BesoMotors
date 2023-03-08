@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../../img/Logo.png";
 import burger from "../../img/HamburgerMenu.svg";
+import close from "../../img/close.png";
 
 import styles from "../../sass/style.module.scss";
 
@@ -42,6 +43,7 @@ export default function Header() {
       style: harleyClasses,
     },
   ]
+  
 
   return (
     <header className={styles.header}>
@@ -52,7 +54,13 @@ export default function Header() {
               <img src={logo} alt="logo"/>
             </Link>
             <div className={styles.header__nenu}>
-              <button onClick={() => setToggle(!toggle)} className={styles.header__burger}><img src={burger} alt="menu"/></button>
+              <button onClick={() => setToggle(!toggle)} 
+                      className={styles.header__burger}>
+                      <img  className={toggle ? styles.header__burger_fixed : null} 
+                            src={toggle ? close : burger} 
+                            width={20} height={20} 
+                            alt="menu"/>
+              </button>
               <nav className={toggle ? styles.header__nav : styles.header__nav_none}>
                 <Link to="/about">
                   <button className={styles.header__links}>Про нас</button>
