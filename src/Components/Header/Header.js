@@ -43,7 +43,6 @@ export default function Header() {
       style: harleyClasses,
     },
   ]
-  
 
   return (
     <header className={styles.header}>

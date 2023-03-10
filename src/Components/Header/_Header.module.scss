@@ -21,7 +21,9 @@ button {
     position: relative;
   }
   &__burger {
-    z-index: 1;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
     &_fixed {
       position: fixed;
       right: 30px;
@@ -31,14 +33,16 @@ button {
   &__nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: fixed;
     gap: 20px;
-    left: -20px;
-    top: -30px;
-    background-color: #798AC9;
+    left: 0px;
+    top: 0px;
+    background-color: #210933;
     padding: 100px 110px;
-    height: 110vh;
-    z-index: 4;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
     transition: 500ms;
     &_none {
       position: absolute;
@@ -52,7 +56,7 @@ button {
     cursor: pointer;
     transition: 200ms;
     &:hover {
-      color: black;
+      color: #FFBC51;;
     }
   }
   &__description__box {
