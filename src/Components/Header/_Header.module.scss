@@ -5,7 +5,7 @@ button {
 }
 
 .header {
-  &__background_mobile {
+  &__background {
     background-image: url(../../img/backgroundMobile.png);
     background-repeat: no-repeat;
     background-size: 100% 800px;
@@ -44,7 +44,7 @@ button {
     height: 100vh;
     z-index: 2;
     transition: 500ms;
-    &_none {
+    &_items {
       position: absolute;
       left: -300px;
     }
@@ -54,7 +54,7 @@ button {
     font-size: 17px;
     font-weight: 800;
     cursor: pointer;
-    transition: 200ms;
+    transition: 300ms;
     &:hover {
       color: #FFBC51;;
     }
@@ -78,6 +78,9 @@ button {
     color: #FFFFFF;
     opacity: 0.8;
   }
+  &__titleImage {
+    display: none;
+  }
   &__tel {
     margin-top: 20px;
     text-decoration: none;
@@ -92,6 +95,14 @@ button {
       color: #798AC9;
     }
   }
+  &__slider {
+    margin-top: 70px;
+  }
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__company__box {
     display: flex;
     justify-content: space-around;
@@ -99,8 +110,8 @@ button {
     margin-top: 50px;
   }
   &__company {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -114,12 +125,83 @@ button {
       background-image: url(../../img/companies/yamahaLogo.png);
     }
     &_bmw {
-      width: 27px;
-      height: 27px;
       background-image: url(../../img/companies/bmwLogo.png);
     }
     &_harley {
       background-image: url(../../img/companies/harleyLogo.png);
+    }
+    &_indian {
+      background-image: url(../../img/companies/indianLogo.png);
+    }
+    &_brp {
+      background-image: url(../../img/companies/brpLogo.png);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__container {
+      padding: 40px;
+    }
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    &__burger {
+      display: none;
+    }
+    &__nav {
+      &_items {
+        position: static;
+      }
+    }
+    &__links {
+      margin-left: 30px;
+    }
+    &__company {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-color: #F7F3FA;
+  }
+  .header {
+    &__background {
+      background-image: url(../../img/backgroundLaptop.png);
+      background-size: 100% 550px;
+      height: 600px;
+      position: relative;
+    }
+    &__container {
+      padding: 50px 120px;
+    }
+    &__description__box {
+      width: 400px;
+      margin-top: 150px;
+    }
+    &__titleImage {
+      display: block;
+      position: absolute;
+      right: 60px;
+      top: 300px;
+    }
+    &__company {
+      display: none;
+    }
+    &__links {
+      padding: 10px 15px;
+      &:hover {
+        color: #FFF;
+        background-color: #FFBC51;
+        border-radius: 16px;
+      }
     }
   }
 }

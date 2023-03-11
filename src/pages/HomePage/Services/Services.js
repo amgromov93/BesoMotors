@@ -49,11 +49,11 @@ export default function Services() {
   return (
     <>
       <div className={styles.services__container}>
-        <section>
+        <section className={styles.services__box}>
           {servicesItems.map((item) => (
             <article key={item.id} className={styles.services__item}>
               {item.image}
-              <div>
+              <div className={styles.services__contents}>
                 <p className={styles.services__sticker}>{item.sticker}</p>
                 {item.title}
                 <p className={styles.services__description}>{item.description}</p>
