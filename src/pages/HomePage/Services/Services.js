@@ -51,18 +51,18 @@ export default function Services() {
       <div className={styles.services__container}>
         <section className={styles.services__box}>
           {servicesItems.map((item) => (
-            <article key={item.id} className={styles.services__item}>
+            <div key={item.id} className={styles.services__item}>
               {item.image}
               <div className={styles.services__contents}>
                 <p className={styles.services__sticker}>{item.sticker}</p>
                 {item.title}
                 <p className={styles.services__description}>{item.description}</p>
               </div>
-            </article>
+            </div>
           ))}
         </section>
       </div> 
-      <div>
+      <div className={styles.services__bannerContainer}>
         <img className={bannerClasses} src={banner} alt="Kvadro" />
         <div className={styles.services__container_text}>
           <p className={styles.services__sticker}>Якісне обслуговування</p>

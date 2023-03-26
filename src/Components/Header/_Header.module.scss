@@ -10,6 +10,9 @@ button {
     background-repeat: no-repeat;
     background-size: 100% 800px;
   }
+  &__white {
+    display: none;
+  }
   &__container {
     padding: 30px;
     position: relative;
@@ -137,6 +140,9 @@ button {
       background-image: url(../../img/companies/brpLogo.png);
     }
   }
+  &__offers {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -176,24 +182,59 @@ button {
     &__background {
       background-image: url(../../img/backgroundLaptop.png);
       background-size: 100% 550px;
-      height: 600px;
       position: relative;
+    }
+    &__white {
+      display: block;
+      background-image: url(../../img/Vector3.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      z-index: -1;
+      bottom: 0px;
     }
     &__container {
       padding: 50px 120px;
     }
     &__description__box {
       width: 400px;
-      margin-top: 150px;
+      margin-top: 120px;
     }
     &__titleImage {
       display: block;
       position: absolute;
-      right: 60px;
-      top: 300px;
+      right: 40px;
+      top: 200px;
     }
     &__company {
-      display: none;
+      // display: none;
+      width: 60px;
+      height: 60px;
+      opacity: 0.9;
+      margin-top: 30px;
+      &_vespa {
+        background-image: url(../../img/companies/black/vespaLogo.png);
+      }
+      &_honda {
+        background-image: url(../../img/companies/black/hondaLogo.png);
+      }
+      &_yamaha {
+        background-image: url(../../img/companies/black/yamahaLogo.png);
+      }
+      &_bmw {
+        background-image: url(../../img/companies/black/bmwLogo.png);
+      }
+      &_harley {
+        background-image: url(../../img/companies/black/harleyLogo.png);
+      }
+      &_indian {
+        background-image: url(../../img/companies/black/indianLogo.png);
+      }
+      &_brp {
+        background-image: url(../../img/companies/black/brpLogo.png);
+      }
     }
     &__links {
       padding: 10px 15px;
@@ -202,6 +243,88 @@ button {
         background-color: #FFBC51;
         border-radius: 16px;
       }
+    }
+    &__offers {
+      display: grid;
+      grid-template-columns: min-content min-content;
+      gap: 25px;
+      margin-top: 200px;
+      &__strip {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 4px 0 0 4px;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(150.72deg, #00B5D0 3.87%, #5C0E62 110.68%);
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #fff;
+        width: 280px;
+        padding: 20px 40px;
+        box-shadow: 7px 10px 50px #E8E2F0;
+        border-radius: 4px;
+        transition: 400ms;
+        &:hover {
+          box-shadow: 7px 10px 50px #aba1b9;
+
+        }
+      }
+      &__title {
+        margin-bottom: 5px;
+      }
+      &__logo_bonus {
+        background-image: url(../../img/offers/bonusSystem.svg);
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+      }
+    }
+    &__offer {
+      width: 400px;
+      margin-bottom: 60px;
+      &__sticker {
+        font-weight: 800;
+        font-size: 11.7849px;
+        line-height: 128.6%;
+        letter-spacing: 0.04em;
+        color: #E23434;
+        text-transform: uppercase;
+      }
+      &__title {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 128.6%;
+        letter-spacing: 0.04em;
+        color: #5C0E62;
+        margin: 10px 0;
+        position: relative;
+        &::before {
+          content: url(../../img/Subtractlite.svg);
+          position: absolute;
+          z-index: -1;
+          opacity: 1;
+          top: -30px;
+          left: -25px;
+        }
+      }
+      &__description {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 128.6%;
+        letter-spacing: 0.04em;
+        color: #857885;
+      }
+    }
+    &__titleContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
     }
   }
 }

@@ -61,6 +61,33 @@ export default function Header() {
     },
   ]
 
+  const offers = [
+    {
+      id: 1,
+      title: "Бонусна система",
+      description: "Знижки та бонуси для постійних клієнтів",
+      style: '',
+    },
+    {
+      id: 2,
+      title: "Євакуація транспорту",
+      description: "Допоможемо євакуювати ваш транспорт",
+      style: '',
+    },
+    {
+      id: 3,
+      title: "Транспортування на сервіс",
+      description: "Наш робітник сам відвезе ваш транспорт на сервіс",
+      style: '',
+    },
+    {
+      id: 4,
+      title: "Мийка",
+      description: "Нема нічого кращого ніж блискучий, чистий транспорт",
+      style: '',
+    },
+  ]
+
   const settings = {
     dots: false,
     infinite: true,
@@ -106,11 +133,29 @@ export default function Header() {
             <a className={styles.header__tel} href="tel:+380500314985">Записатися на діагностику</a>
           </div>
           <div className={styles.header__titleImage}> 
-            <img src={vespaTitle} width="450" alt="vespa"></img>
+            <img src={vespaTitle} width="580" alt="vespa"></img>
+          </div>
+          <div className={styles.header__titleContainer}>
+            <div className={styles.header__offers}>
+              {offers.map((offer) => (
+                <div key={offer.id} className={styles.header__offers__item}>
+                  <div className={styles.header__offers__strip}></div>
+                  <p className={styles.header__offers__logo_bonus}></p>
+                  <h4 className={styles.header__offers__title}>{offer.title}</h4>
+                  <p className={styles.header__offersItem__text}>{offer.description}</p>
+                </div>
+                )
+              )}
+            </div>
+            <div className={styles.header__offer}>
+              <p className={styles.header__offer__sticker}>Якісне обслуговування</p>
+              <h2 className={styles.header__offer__title}>Довіряйте профессіоналам</h2>
+              <p className={styles.header__offer__description}>Справний технічний стан транспорту - запорука вашого життя та задоволення від керування.</p>
+            </div>
           </div>
           <Slider {...settings} className={styles.header__slider}>
             {companies.map((item) => (
-                <div key={item.id} >
+                <div key={item.id}>
                   <div className={styles.header__slide}>
                     <p className={item.style}></p>
                   </div>
@@ -119,6 +164,7 @@ export default function Header() {
             )}
           </Slider>
         </div>
+        <div className={styles.header__white}></div>
       </div>
     </header>
   )

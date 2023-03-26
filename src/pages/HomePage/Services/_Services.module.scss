@@ -59,10 +59,63 @@
 
 @media screen and (min-width: 768px) {
   .services {
+    &__container {
+      padding: 0 40px;
+    }
     &__box {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0px 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .services {
+    &__container {
+      background-color: #fff;
+      padding: 50px 120px;
+    }
+    &__box {
+      display: flex;
+      flex-direction: column;
+      padding: 0 100px;
+    }
+    &__item {
+      flex-direction: row;
+      justify-content: space-between;
+      &:nth-child(2n+1) {
+        flex-direction: row-reverse;
+      }
+    }
+    &__contents {
+      width: 300px;
+    }
+    &__pic {
+      width: 50%;
+      height: auto;
+    }
+    &__bannerContainer {
+      display: none;
+    }
+    &__sticker {
+      position: sticky;
+      z-index: 3;
+    }
+    &__title {
+      color: #857885;
+      z-index: 2;
+      &::before {
+        z-index: -2;
+        opacity: 1;
+      }
+      &_span {
+        color: #5C0E62;
+      }
+    }
+    &__description {
+      color: #857885;
     }
   }
 }

@@ -9,8 +9,8 @@ export default function Footer() {
     <>
       <section className={styles.footer}>
         <div className={styles.footer__container}>
-          <img src={logo} width={150} alt="logo"></img>
-          <article>
+          <img className={styles.footer__logo} src={logo} width={150} alt="logo"></img>
+          <article className={styles.footer__categories}>
             <h4 className={styles.footer__category__title}>Категорії</h4>
             <div className={styles.footer__box}>
               <Link to='/about'>
@@ -30,7 +30,7 @@ export default function Footer() {
               </Link>
             </div>
           </article>
-          <article>
+          <article className={styles.footer__contacts}>
             <h4 className={styles.footer__category__title}>Контакти</h4>
             <div className={styles.footer__box}>
               <Link to='/contacts'>

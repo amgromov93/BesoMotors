@@ -47,14 +47,29 @@
     text-transform: uppercase;
     color: #FFBC51;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 40px;
   }
-  &__jobTitle {
-    font-weight: 800;
-    margin-bottom: 30px;
-    font-size: 14.0817px;
-    line-height: 128.6%;
-    letter-spacing: 0.04em;
-    color: #FFBC51;
+}
+
+@media screen and (min-width: 992px) {
+  .ourTeam {
+    position: relative;
+    padding: 60px 80px;
+    &__title {
+      &::after {
+        content: url(../../../img/Vector5.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        bottom: 200px;
+      }
+      &::before {
+        content: url(../../../img/Vector6.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        bottom: 350px;
+      }
+    }
   }
 }
