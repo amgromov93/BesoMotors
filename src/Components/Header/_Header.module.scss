@@ -52,6 +52,9 @@ button {
       left: -300px;
     }
   }
+  &__offer {
+    display: none;
+  }
   &__links {
     color: #FFFFFF;
     font-size: 17px;
@@ -59,7 +62,10 @@ button {
     cursor: pointer;
     transition: 300ms;
     &:hover {
-      color: #FFBC51;;
+      color: #FFBC51;
+    }
+    &_active {
+      color: #FFBC51;
     }
   }
   &__description__box {
@@ -209,7 +215,6 @@ button {
       top: 200px;
     }
     &__company {
-      // display: none;
       width: 60px;
       height: 60px;
       opacity: 0.9;
@@ -285,6 +290,7 @@ button {
       }
     }
     &__offer {
+      display: block;
       width: 400px;
       margin-bottom: 60px;
       &__sticker {
@@ -323,8 +329,7 @@ button {
     &__titleContainer {
       display: flex;
       justify-content: space-between;
-      align-items: end;
-      gap: 40px;
+      align-items: flex-end;
     }
   }
 }

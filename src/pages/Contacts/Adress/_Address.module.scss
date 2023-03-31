@@ -21,3 +21,27 @@
     }
   }
 }
+
+@media screen and (min-width: 992px) {
+  .address {
+    padding-left: 120px;
+    padding-bottom: 30px;
+    &__title {
+      color: #E23434;
+      font-size: 20px;
+    }
+    &__company__name {
+      color: #5C0E62;
+      font-size: 28px;
+      letter-spacing: 0.05em;
+    }
+    &__box {
+      color: #857885;
+      & p {
+        font-size: 15px;
+        font-weight: 400;
+        margin: 15px 0;
+      }
+    }
+  }
+}

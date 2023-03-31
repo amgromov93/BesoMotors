@@ -2,10 +2,10 @@ import React from "react";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 
-export default function About() {
+export default function Services() {
   return (
     <>
-      <Header/>
+      <Header />
       <Footer />
     </>
   )
