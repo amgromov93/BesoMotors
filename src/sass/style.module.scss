@@ -4,10 +4,10 @@
 @import '../Components/Header/Header.module';
 @import '../Components/Footer/Footer.module';
 
-@import '../pages/HomePage/Services/Services.module';
-@import '../pages/HomePage/OurTeam/OurTeam.module';
+@import '../Components/Services/Services.module';
+@import '../Components/OurTeam/OurTeam.module';
 
-@import '../pages/Contacts/Contacts.module.scss';
-@import '../pages/Contacts/Map/Map.module';
-@import '../pages/Contacts/Adress/Address.module';
-@import '../pages/NotFound/NotFound.module';
+@import '../Components/Contacts/Contacts.module.scss';
+@import '../Components/Contacts/Map/Map.module';
+@import '../Components/Contacts/Adress/Address.module';
+// @import '../pages/NotFound/NotFound.module';

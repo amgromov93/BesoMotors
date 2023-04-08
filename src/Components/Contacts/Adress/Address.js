@@ -4,7 +4,7 @@ import styles from "../../../sass/style.module.scss";
 
 export default function Address() {
   return (
-    <section className={styles.address}>
+    <section id="contacts" className={styles.address}>
       <p className={styles.address__title}>Наша адреса</p>
       <h3 className={styles.address__company__name}>Beso Motors</h3>
       <article className={styles.address__box}>

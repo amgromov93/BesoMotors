@@ -1,12 +1,12 @@
 import React from "react";
 
-import styles from "../../../sass/style.module.scss";
+import styles from "../../sass/style.module.scss";
 
-import vespa from "../../../img/vespa.png";
-import kawasaki from "../../../img/kawasaki.png"
-import details from "../../../img/details.png";
-import kvadro from "../../../img/kvadro.png";
-import banner from "../../../img/banerMoto.png";
+import vespa from "../../img/vespa.png";
+import kawasaki from "../../img/kawasaki.png"
+import details from "../../img/details.png";
+import kvadro from "../../img/kvadro.png";
+import banner from "../../img/banerMoto.png";
 
 export default function Services() {
   const bannerClasses = styles.services__pic + ' ' + styles.services__pic_banner;
@@ -48,7 +48,7 @@ export default function Services() {
 
   return (
     <>
-      <div className={styles.services__container}>
+      <div id="services" className={styles.services__container}>
         <section className={styles.services__box}>
           {servicesItems.map((item) => (
             <div key={item.id} className={styles.services__item}>

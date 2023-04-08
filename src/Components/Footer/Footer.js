@@ -1,15 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-import logo from "../../img/Logo.png";
+// import logo from "../../img/anarchyLogo.svg";
 import styles from "../../sass/style.module.scss";
 
 export default function Footer() {
   return (
     <>
       <section className={styles.footer}>
-        <div className={styles.footer__container}>
-          <img className={styles.footer__logo} src={logo} width={150} alt="logo"></img>
+        {/* <div className={styles.footer__container}>
+          <img className={styles.footer__logo} src={logo} width={160} alt="logo"></img>
           <article className={styles.footer__categories}>
             <h4 className={styles.footer__category__title}>Категорії</h4>
             <div className={styles.footer__box}>
@@ -71,7 +71,7 @@ export default function Footer() {
             <p>Copy Right 2023.</p>
             <p>All rights reserved</p>
           </article>
-        </div>
+        </div> */}
       </section>
     </>
   )

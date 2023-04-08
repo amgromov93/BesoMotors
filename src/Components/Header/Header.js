@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import logo from "../../img/Logo.png";
+import logo from "../../img/anarchyLogo.svg";
 import burger from "../../img/HamburgerMenu.svg";
 import close from "../../img/close.png";
 import vespaTitle from "../../img/vespaHeader.png";
@@ -14,6 +14,7 @@ import styles from "../../sass/style.module.scss";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
+  const [fix, setFix] = useState(false);
 
   const vespaClasses = styles.header__company + ' ' + styles.header__company_vespa;
   const hondaClasses = styles.header__company + ' ' + styles.header__company_honda;
@@ -98,36 +99,48 @@ export default function Header() {
     slidesToScroll: 1,
   };
 
+  function setFixed() {
+    if (window.scrollY >= 40) {
+      setFix(true)
+    } else {
+      setFix(false)
+    }
+  }
+
+  window.addEventListener("scroll", setFixed);
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="top">
       <div className={styles.header__background}>
         <div className={styles.header__container}>
-          <div className={styles.header__menu}>
-            <Link to="/">
-              <img src={logo} alt="logo"/>
-            </Link>
-            <div className={styles.header__nenu}>
-              <button onClick={() => setToggle(!toggle)} 
-                      className={styles.header__burger}>
-                      <img  className={toggle ? styles.header__burger_fixed : null} 
-                            src={toggle ? close : burger} 
-                            width={20} height={20} 
-                            alt="menu"/>
-              </button>
-              <nav className={toggle ? styles.header__nav : styles.header__nav_items}>
-                <Link to="/about">
-                  <button className={styles.header__links}>Про нас</button>
-                </Link>
-                <Link to="/services">
-                  <button className={styles.header__links}>Послуги</button>
-                </Link>
-                <Link to="/contacts">
-                  <button className={styles.header__links}>Контакти</button>
-                </Link>
-              </nav>
-            </div> 
+          <div className={fix ? styles.header__fixed : null}>
+            <div className={styles.header__menu}>
+              <Link href="/" to="top" duration={500} spy={true} smooth={true}>
+                <img src={logo} width={220} alt="logo"/>
+              </Link>
+              <div className={styles.header__nenu}>
+                <button onClick={() => setToggle(!toggle)} 
+                        className={styles.header__burger}>
+                        <img  className={toggle ? styles.header__burger_fixed : null} 
+                              src={toggle ? close : burger} 
+                              width={20} height={20} 
+                              alt="menu"/>
+                </button>
+                <div className={toggle ? styles.header__nav : styles.header__nav_items}>
+                  <Link className={styles.header__links} activeClass="active" to="services" spy={true} smooth={true} offset={-50} duration={500}>
+                    Про нас
+                  </Link>
+                  <Link className={styles.header__links} activeClass="active" to="services" spy={true} smooth={true} offset={-50} duration={500}>
+                    Послуги
+                  </Link>
+                  <Link className={styles.header__links} activeClass="active" to="contacts" spy={true} smooth={true} offset={-50} duration={500}>
+                    Контакти
+                  </Link>
+                </div>
+              </div> 
+            </div>
           </div>
-          <div className={styles.header__description__box}>
+          <div className={fix ? styles.header__description__box : styles.header__description__box_margin}>
             <h1 className={styles.header__title}>Твій сервіс з ремонту мототехніки</h1>
             <p className={styles.header__description}>Ремонт та обслуговування мотоциклів, квадроциклів, моторолерів в Києві. Ваша техніка в надійних руках!</p>
             <a className={styles.header__tel} href="tel:+380500314985">Записатися на діагностику</a>
