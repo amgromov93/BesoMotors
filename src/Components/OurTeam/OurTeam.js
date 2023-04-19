@@ -26,49 +26,49 @@ export default function OurTeam() {
   };
 
   return (
-    <section className={styles.ourTeam}>
+    <section className={styles.ourTeam} id="reviews">
       <h2 className={styles.ourTeam__title}>Відгуки про <span className={styles.ourTeam__title_span}>ANARCHY MOTORS</span></h2>
       <Slider {...settings}>
         <div>
           <article className={styles.ourTeam__box}>
             <div className={styles.ourTeam__image}></div>
-            <p className={styles.ourTeam__description}>Ось що я вам скажу, хлопці: у цьому розлюченому всесвіті є всього лише три надійні речі — своя голова, друзі та мотоцикл.</p>
-            <p className={styles.ourTeam__workerName}>Ігор Владіміров</p>
+            <p className={styles.ourTeam__description}>Ціни сподобались, якість 10з10! Пофарбували раму, фарбу підібрали чітко, красені.</p>
+            <p className={styles.ourTeam__workerName}>Ігор</p>
           </article>
         </div>
         <div>
           <article className={styles.ourTeam__box}>
             <div className={styles.ourTeam__image}></div>
-            <p className={styles.ourTeam__description}>Ось що я вам скажу, хлопці: у цьому розлюченому всесвіті є всього лише три надійні речі — своя голова, друзі та мотоцикл.</p>
-            <p className={styles.ourTeam__workerName}>Ігор Владіміров</p>
+            <p className={styles.ourTeam__description}>Чудовий сервіс! Роботу зробили швидко та якісно! </p>
+            <p className={styles.ourTeam__workerName}>Ярослав</p>
           </article>
         </div>
         <div>
           <article className={styles.ourTeam__box}>
             <div className={styles.ourTeam__image}></div>
-            <p className={styles.ourTeam__description}>Ось що я вам скажу, хлопці: у цьому розлюченому всесвіті є всього лише три надійні речі — своя голова, друзі та мотоцикл.</p>
-            <p className={styles.ourTeam__workerName}>Ігор Владіміров</p>
+            <p className={styles.ourTeam__description}>Гарна локація! Чудові майстри! Рекомендую !</p>
+            <p className={styles.ourTeam__workerName}>Влада</p>
           </article>
         </div>
         <div>
           <article className={styles.ourTeam__box}>
             <div className={styles.ourTeam__image}></div>
-            <p className={styles.ourTeam__description}>Ось що я вам скажу, хлопці: у цьому розлюченому всесвіті є всього лише три надійні речі — своя голова, друзі та мотоцикл.</p>
-            <p className={styles.ourTeam__workerName}>Ігор Владіміров</p>
+            <p className={styles.ourTeam__description}>Обслуговую в хлопців мотоцикл вже більше року, роботою задоволений, завжди якісно.  Рекомендую </p>
+            <p className={styles.ourTeam__workerName}>Женя</p>
           </article>
         </div>
         <div>
           <article className={styles.ourTeam__box}>
             <div className={styles.ourTeam__image}></div>
-            <p className={styles.ourTeam__description}>Ось що я вам скажу, хлопці: у цьому розлюченому всесвіті є всього лише три надійні речі — своя голова, друзі та мотоцикл.</p>
-            <p className={styles.ourTeam__workerName}>Ігор Владіміров</p>
+            <p className={styles.ourTeam__description}>Професіонали своєї справи!</p>
+            <p className={styles.ourTeam__workerName}>Любомир</p>
           </article>
         </div>
         <div>
           <article className={styles.ourTeam__box}>
             <div className={styles.ourTeam__image}></div>
-            <p className={styles.ourTeam__description}>Ось що я вам скажу, хлопці: у цьому розлюченому всесвіті є всього лише три надійні речі — своя голова, друзі та мотоцикл.</p>
-            <p className={styles.ourTeam__workerName}>Ігор Владіміров</p>
+            <p className={styles.ourTeam__description}>Дякую за роботу! Дуже задоволений, все на вищому рівні!</p>
+            <p className={styles.ourTeam__workerName}>Ярослав</p>
           </article>
         </div>
       </Slider>

@@ -72,6 +72,7 @@ button {
     margin-top: 55px;
   }
   &__title {
+    margin-top: 80px;
     font-style: normal;
     font-weight: 800;
     font-size: 34px;
@@ -212,10 +213,13 @@ button {
         margin-top: 60px;
       }
     }
+    &__title {
+      margin: 0;
+    }
     &__titleImage {
       display: block;
       position: absolute;
-      right: 40px;
+      right: 80px;
       top: 200px;
     }
     &__fixed {
@@ -297,6 +301,30 @@ button {
       &__logo_bonus {
         background-image: url(../../img/offers/bonusSystem.svg);
         background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+      }
+      &__logo_delivery {
+        background-image: url(../../img/iconsForHeaderBlock/deliveryIcon.svg);
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+      }
+      &__logo_evacuation {
+        background-image: url(../../img/iconsForHeaderBlock/evacuationIcon.svg);
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+      }
+      &__logo_washing {
+        background-image: url(../../img/iconsForHeaderBlock/washingIcon.svg);
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
         width: 30px;
         height: 30px;
         margin-bottom: 5px;

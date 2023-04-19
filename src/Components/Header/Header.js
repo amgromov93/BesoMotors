@@ -68,24 +68,28 @@ export default function Header() {
       title: "Бонусна система",
       description: "Знижки та бонуси для постійних клієнтів",
       style: '',
+      img: <p className={styles.header__offers__logo_bonus}></p>,
     },
     {
       id: 2,
       title: "Євакуація транспорту",
       description: "Допоможемо євакуювати ваш транспорт",
       style: '',
+      img: <p className={styles.header__offers__logo_delivery}></p>,
     },
     {
       id: 3,
       title: "Транспортування на сервіс",
       description: "Наш робітник сам відвезе ваш транспорт на сервіс",
       style: '',
+      img: <p className={styles.header__offers__logo_evacuation}></p>,
     },
     {
       id: 4,
       title: "Мийка",
       description: "Нема нічого кращого ніж блискучий, чистий транспорт",
       style: '',
+      img: <p className={styles.header__offers__logo_washing}></p>,
     },
   ]
 
@@ -100,7 +104,7 @@ export default function Header() {
   };
 
   function setFixed() {
-    if (window.scrollY >= 40) {
+    if (window.scrollY >= 40 && window.innerWidth >= 992) {
       setFix(true)
     } else {
       setFix(false)
@@ -128,12 +132,12 @@ export default function Header() {
                 </button>
                 <div className={toggle ? styles.header__nav : styles.header__nav_items}>
                   <Link className={styles.header__links} activeClass="active" to="services" spy={true} smooth={true} offset={-50} duration={500}>
-                    Про нас
-                  </Link>
-                  <Link className={styles.header__links} activeClass="active" to="services" spy={true} smooth={true} offset={-50} duration={500}>
                     Послуги
                   </Link>
-                  <Link className={styles.header__links} activeClass="active" to="contacts" spy={true} smooth={true} offset={-50} duration={500}>
+                  <Link className={styles.header__links} activeClass="active" to="reviews" spy={true} smooth={true} offset={-150} duration={500}>
+                    Відгуки
+                  </Link>
+                  <Link className={styles.header__links} activeClass="active" to="contacts" spy={true} smooth={true} offset={-150} duration={500}>
                     Контакти
                   </Link>
                 </div>
@@ -143,17 +147,17 @@ export default function Header() {
           <div className={fix ? styles.header__description__box : styles.header__description__box_margin}>
             <h1 className={styles.header__title}>Твій сервіс з ремонту мототехніки</h1>
             <p className={styles.header__description}>Ремонт та обслуговування мотоциклів, квадроциклів, моторолерів в Києві. Ваша техніка в надійних руках!</p>
-            <a className={styles.header__tel} href="tel:+380500314985">Записатися на діагностику</a>
+            <a className={styles.header__tel} href="tel:+380960951488">Записатися на діагностику</a>
           </div>
           <div className={styles.header__titleImage}> 
-            <img src={vespaTitle} width="580" alt="vespa"></img>
+            <img src={vespaTitle} width="520" alt="vespa"></img>
           </div>
           <div className={styles.header__titleContainer}>
             <div className={styles.header__offers}>
               {offers.map((offer) => (
                 <div key={offer.id} className={styles.header__offers__item}>
                   <div className={styles.header__offers__strip}></div>
-                  <p className={styles.header__offers__logo_bonus}></p>
+                  {offer.img}
                   <h4 className={styles.header__offers__title}>{offer.title}</h4>
                   <p className={styles.header__offersItem__text}>{offer.description}</p>
                 </div>
