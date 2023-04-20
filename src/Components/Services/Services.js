@@ -15,7 +15,8 @@ export default function Services() {
     {
       id: 1,
       sticker: "",
-      title: <h2 className={styles.services__title}>Сервісне <span className={styles.services__title_span}>обслуговування</span></h2>,
+      hiddenTitle: <h3 className={styles.visually_hidden}>Сервісне обслуговування мотоциклів та квадроциклів</h3>,
+      title: <p className={styles.services__title}>Сервісне <span className={styles.services__title_span}>обслуговування</span></p>,
       description: "МоторСервіс надає послуги з діагностики, обслуговуванню та ремонту мотоциклів. Своєчасне проходження технічного обслуговування це, в першу чергу, запорука вашої безпеки.",
       image: <img className={styles.services__pic} src={vespa} alt="Vespa" width={250} />,
       style: "",
@@ -23,7 +24,8 @@ export default function Services() {
     {
       id: 2,
       sticker: "Тюнінг",
-      title: <h2 className={styles.services__title}>Покращення <span className={styles.services__title_span}>технічних якостей</span> транспорту</h2>,
+      hiddenTitle: <h3 className={styles.visually_hidden}>Покращення технічних якостей траспорту</h3>,
+      title: <p className={styles.services__title}>Покращення <span className={styles.services__title_span}>технічних якостей</span> транспорту</p>,
       description: "Практично всі мотолюбителі прагнуть зробити свій транспортний засіб максимально особливим та відмінним від інших. Саме тюнінг мотоцикла допоможе у втіленні цього бажання.",
       image: <img className={styles.services__pic} src={kawasaki} alt="Kawasaki" width={250} />,
       style: "",
@@ -31,7 +33,8 @@ export default function Services() {
     {
       id: 3,
       sticker: "",
-      title: <h2 className={styles.services__title}><span className={styles.services__title_span}>Запчастини</span> для мотоциклів та квадроциклів</h2>,
+      hiddenTitle: <h3 className={styles.visually_hidden}>Запчастини для мотоциклів та квадроциклів</h3>,
+      title: <p className={styles.services__title}><span className={styles.services__title_span}>Запчастини</span> для мотоциклів та квадроциклів</p>,
       description: "У нас в сервісі ви можете придбати 100% оригінальні запчастини для вашої техніки. Не треба бігати по магазинам чи шукати в інтернеті потрібні деталі!",
       image: <img className={styles.services__pic} src={details} alt="Details" width={250} />,
       style: "",
@@ -39,7 +42,8 @@ export default function Services() {
     {
       id: 4,
       sticker: "Фарбування",
-      title: <h2 className={styles.services__title}><span className={styles.services__title_span}>Лакофарбові</span> роботи</h2>,
+      hiddenTitle: <h3 className={styles.visually_hidden}>Лакофарбові роботи</h3>,
+      title: <p className={styles.services__title}><span className={styles.services__title_span}>Лакофарбові</span> роботи</p>,
       description: "Ваш хром не такий сліпуче яскравий, як раніше? В загальну неперевершеність улюбленого байка закралась маленька, але дуже дратуюча подряпина і продовжує ятрити вам душу й серце? Не впадайте у відчай! Все можна змінити на краще.",
       image: <img className={styles.services__pic} src={kvadro} alt="Kvadro" width={250}/>,
       style: "",
@@ -49,12 +53,14 @@ export default function Services() {
   return (
     <>
       <div id="services" className={styles.services__container}>
+      <h2 className={styles.visually_hidden}>Сервіс, ремонт та обслуговування мотоциклів і квадроциклів в Києві.</h2>,
         <section className={styles.services__box}>
           {servicesItems.map((item) => (
             <div key={item.id} className={styles.services__item}>
               {item.image}
               <div className={styles.services__contents}>
                 <p className={styles.services__sticker}>{item.sticker}</p>
+                {item.hiddenTitle}
                 {item.title}
                 <p className={styles.services__description}>{item.description}</p>
               </div>

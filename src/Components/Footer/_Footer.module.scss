@@ -33,7 +33,7 @@
   &__social {
     display: flex;
     justify-content: space-around;
-    width: 160px;
+    width: 200px;
     margin-top: 20px;
     &_telegram path{
       transition: 300ms;
@@ -51,6 +51,12 @@
       transition: 300ms;
     }
     &_facebook:hover path{
+      fill: #fff;
+    }
+    &_tiktok path {
+      transition: 300ms;
+    }
+    &_tiktok:hover path {
       fill: #fff;
     }
   }

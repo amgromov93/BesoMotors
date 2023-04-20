@@ -131,13 +131,13 @@ export default function Header() {
                               alt="menu"/>
                 </button>
                 <div className={toggle ? styles.header__nav : styles.header__nav_items}>
-                  <Link className={styles.header__links} activeClass="active" to="services" spy={true} smooth={true} offset={-50} duration={500}>
+                  <Link onClick={() => setToggle(!toggle)} className={styles.header__links} activeClass="active" to="services" spy={true} smooth={true} offset={-50} duration={500}>
                     Послуги
                   </Link>
-                  <Link className={styles.header__links} activeClass="active" to="reviews" spy={true} smooth={true} offset={-150} duration={500}>
+                  <Link onClick={() => setToggle(!toggle)} className={styles.header__links} activeClass="active" to="reviews" spy={true} smooth={true} offset={-150} duration={500}>
                     Відгуки
                   </Link>
-                  <Link className={styles.header__links} activeClass="active" to="contacts" spy={true} smooth={true} offset={-150} duration={500}>
+                  <Link onClick={() => setToggle(!toggle)} className={styles.header__links} activeClass="active" to="contacts" spy={true} smooth={true} offset={-150} duration={500}>
                     Контакти
                   </Link>
                 </div>
@@ -145,7 +145,7 @@ export default function Header() {
             </div>
           </div>
           <div className={fix ? styles.header__description__box : styles.header__description__box_margin}>
-            <h1 className={styles.header__title}>Твій сервіс з ремонту мототехніки</h1>
+            <h1 className={styles.header__title}>Твій сервіс з ремонту мототехніки в Києві</h1>
             <p className={styles.header__description}>Ремонт та обслуговування мотоциклів, квадроциклів, моторолерів в Києві. Ваша техніка в надійних руках!</p>
             <a className={styles.header__tel} href="tel:+380960951488">Записатися на діагностику</a>
           </div>
