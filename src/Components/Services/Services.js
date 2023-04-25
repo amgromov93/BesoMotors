@@ -1,4 +1,5 @@
 import React from "react";
+import { Slide } from "react-awesome-reveal";
 
 import styles from "../../sass/style.module.scss";
 
@@ -17,7 +18,7 @@ export default function Services() {
       sticker: "",
       hiddenTitle: <h3 className={styles.visually_hidden}>Сервісне обслуговування мотоциклів та квадроциклів</h3>,
       title: <p className={styles.services__title}>Сервісне <span className={styles.services__title_span}>обслуговування</span></p>,
-      description: "МоторСервіс надає послуги з діагностики, обслуговуванню та ремонту мотоциклів. Своєчасне проходження технічного обслуговування це, в першу чергу, запорука вашої безпеки.",
+      description: "Анархі моторос надає послуги з діагностики, обслуговуванню та ремонту мотоциклів в Києві. Своєчасне проходження технічного обслуговування це, в першу чергу, запорука вашої безпеки.",
       image: <img className={styles.services__pic} src={vespa} alt="Vespa" width={250} />,
       style: "",
     },
@@ -56,15 +57,17 @@ export default function Services() {
       <h2 className={styles.visually_hidden}>Сервіс, ремонт та обслуговування мотоциклів і квадроциклів в Києві.</h2>,
         <section className={styles.services__box}>
           {servicesItems.map((item) => (
-            <div key={item.id} className={styles.services__item}>
-              {item.image}
-              <div className={styles.services__contents}>
-                <p className={styles.services__sticker}>{item.sticker}</p>
-                {item.hiddenTitle}
-                {item.title}
-                <p className={styles.services__description}>{item.description}</p>
-              </div>
-            </div>
+              <Slide key={item.id} triggerOnce>
+                <div className={styles.services__item}> 
+                  {item.image}
+                  <div className={styles.services__contents}>
+                    <p className={styles.services__sticker}>{item.sticker}</p>
+                    {item.hiddenTitle}
+                    {item.title}
+                    <p className={styles.services__description}>{item.description}</p>
+                  </div>
+                </div>
+              </Slide>
           ))}
         </section>
       </div> 
